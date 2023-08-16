@@ -13,6 +13,7 @@ public class BankingApp2 {
         final String RESET = "\033[30;0m";
 
         final String SUCCESS_MSG = String.format("%s%s%s\n", GREEN_BOLD_START, "%s", RESET);
+        final String ERROR_MSG = String.format("\t%s%s%s\n", RED_BOLD_START, "%s", RESET);
 
         final String MAIN_MENU = "\u1F4B0 Welcome to Smart Banking App";
         final String OPEN_NEW_ACCOUNT = "Add New Customer";
@@ -41,10 +42,6 @@ public class BankingApp2 {
                     System.out.println(" [6]. Drop Existig Account");
                     System.out.println(" [7]. Exit\n");
                     System.out.print(" Enter an option to continue: ");
-
-                    for (int i = 0; i < customer.length; i++) {
-                        System.out.println(Arrays.toString(customer[i]));
-                    }
 
                     int option = scanner.nextInt();
                     scanner.nextLine();
